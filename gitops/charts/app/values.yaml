@@ -1,0 +1,19 @@
+api:
+  image:
+    repository: ghcr.io/umar-farooq1427/devsecops-platform/api
+    tag: 4e5e99a471d6e1c9c9de57d70274ecb62ed84ff6
+  replicas: 2
+  port: 8080
+  resources:
+    requests:
+      cpu: 50m
+      memory: 64Mi
+    limits:
+      cpu: 250m
+      memory: 128Mi
+
+redis:
+  image: redis:7-alpine
+
+service:
+  port: 80
